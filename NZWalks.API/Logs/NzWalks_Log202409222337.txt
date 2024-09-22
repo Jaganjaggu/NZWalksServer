@@ -1,0 +1,18 @@
+2024-09-22 23:37:44.428 +05:30 [INF] Request starting HTTP/2 DELETE https://localhost:7164/api/WalksControler/cd9cf5e0-5119-4eba-cf91-08dcdafcf39a - null null
+2024-09-22 23:37:44.455 +05:30 [INF] CORS policy execution successful.
+2024-09-22 23:37:44.456 +05:30 [INF] Executing endpoint 'NZWalks.API.Controllers.WalksControler.Delete (NZWalks.API)'
+2024-09-22 23:37:44.465 +05:30 [INF] Route matched with {action = "Delete", controller = "WalksControler"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Delete(System.Guid) on controller NZWalks.API.Controllers.WalksControler (NZWalks.API).
+2024-09-22 23:37:44.479 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [w].[Id], [w].[Description], [w].[DifficultyId], [w].[LengthInKm], [w].[Name], [w].[RegionId], [w].[WalkImageUrl]
+FROM [Walks] AS [w]
+WHERE [w].[Id] = @__id_0
+2024-09-22 23:37:44.508 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@p0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [Walks]
+OUTPUT 1
+WHERE [Id] = @p0;
+2024-09-22 23:37:44.525 +05:30 [INF] Executing OkObjectResult, writing value of type 'NZWalks.API.Models.DTO.WalkDto'.
+2024-09-22 23:37:44.527 +05:30 [INF] Executed action NZWalks.API.Controllers.WalksControler.Delete (NZWalks.API) in 59.738ms
+2024-09-22 23:37:44.531 +05:30 [INF] Executed endpoint 'NZWalks.API.Controllers.WalksControler.Delete (NZWalks.API)'
+2024-09-22 23:37:44.541 +05:30 [INF] Request finished HTTP/2 DELETE https://localhost:7164/api/WalksControler/cd9cf5e0-5119-4eba-cf91-08dcdafcf39a - 200 null application/json; charset=utf-8 113.6077ms

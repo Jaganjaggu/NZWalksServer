@@ -1,0 +1,257 @@
+2024-09-22 23:39:06.659 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7164/api/Regions - null null
+2024-09-22 23:39:06.674 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7164/api/WalksControler?pageNumber=1&pageSize=1000 - null null
+2024-09-22 23:39:06.720 +05:30 [INF] CORS policy execution successful.
+2024-09-22 23:39:06.723 +05:30 [INF] CORS policy execution successful.
+2024-09-22 23:39:06.673 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7164/api/Regions - null null
+2024-09-22 23:39:06.741 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7164/api/Regions - 204 null null 81.4421ms
+2024-09-22 23:39:06.742 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7164/api/WalksControler?pageNumber=1&pageSize=1000 - 204 null null 67.7913ms
+2024-09-22 23:39:06.779 +05:30 [INF] CORS policy execution successful.
+2024-09-22 23:39:06.690 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7164/api/Regions - null null
+2024-09-22 23:39:06.706 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7164/api/Regions - null null
+2024-09-22 23:39:06.723 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7164/api/WalksControler?pageNumber=1&pageSize=1000 - null null
+2024-09-22 23:39:06.777 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7164/api/Regions - application/json null
+2024-09-22 23:39:06.784 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7164/api/WalksControler?pageNumber=1&pageSize=1000 - application/json null
+2024-09-22 23:39:06.808 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7164/api/Regions - 204 null null 134.5768ms
+2024-09-22 23:39:06.813 +05:30 [INF] CORS policy execution successful.
+2024-09-22 23:39:06.819 +05:30 [INF] CORS policy execution successful.
+2024-09-22 23:39:06.823 +05:30 [INF] CORS policy execution successful.
+2024-09-22 23:39:06.828 +05:30 [INF] CORS policy execution successful.
+2024-09-22 23:39:06.833 +05:30 [INF] CORS policy execution successful.
+2024-09-22 23:39:06.842 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7164/api/Regions - 204 null null 152.2815ms
+2024-09-22 23:39:06.844 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7164/api/Regions - 204 null null 137.6981ms
+2024-09-22 23:39:06.845 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7164/api/WalksControler?pageNumber=1&pageSize=1000 - 204 null null 122.029ms
+2024-09-22 23:39:06.847 +05:30 [INF] Executing endpoint 'NZWalks.API.Controllers.RegionsController.GetAll (NZWalks.API)'
+2024-09-22 23:39:06.848 +05:30 [INF] Executing endpoint 'NZWalks.API.Controllers.WalksControler.GetAll (NZWalks.API)'
+2024-09-22 23:39:06.871 +05:30 [INF] Route matched with {action = "GetAll", controller = "Regions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller NZWalks.API.Controllers.RegionsController (NZWalks.API).
+2024-09-22 23:39:06.872 +05:30 [INF] Route matched with {action = "GetAll", controller = "WalksControler"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(System.String, System.String, System.String, System.Nullable`1[System.Boolean], Int32, Int32) on controller NZWalks.API.Controllers.WalksControler (NZWalks.API).
+2024-09-22 23:39:06.877 +05:30 [INF] Get All Region Action method was invoked
+2024-09-22 23:39:06.897 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[Code], [r].[Name], [r].[RegionImageUrl]
+FROM [Regions] AS [r]
+2024-09-22 23:39:06.901 +05:30 [INF] Finished GetAllRegions data:[{"Id":"f7248fc3-2585-4efb-8d1d-1c555f4087f6","Code":"AKL","Name":"Auckland","RegionImageUrl":"https://images.pexels.com/photos/5169056/pexels-photo-5169056.jpeg?auto=compress\u0026cs=tinysrgb\u0026w=1260\u0026h=750\u0026dpr=1"},{"Id":"14ceba71-4b51-4777-9b17-46602cf66153","Code":"BOP","Name":"Bay Of Plenty","RegionImageUrl":null},{"Id":"6884f7d7-ad1f-4101-8df3-7a6fa7387d81","Code":"NTL","Name":"Northland","RegionImageUrl":null},{"Id":"f077a22e-4248-4bf6-b564-c7cf4e250263","Code":"STL","Name":"Southland","RegionImageUrl":null},{"Id":"cfa06ed2-bf65-4b65-93ed-c9d286ddb0de","Code":"WGN","Name":"Wellington","RegionImageUrl":"https://images.pexels.com/photos/4350631/pexels-photo-4350631.jpeg?auto=compress\u0026cs=tinysrgb\u0026w=1260\u0026h=750\u0026dpr=1"}]
+2024-09-22 23:39:06.903 +05:30 [INF] Executed DbCommand (18ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Description], [t].[DifficultyId], [t].[LengthInKm], [t].[Name], [t].[RegionId], [t].[WalkImageUrl], [d].[Id], [d].[Name], [r].[Id], [r].[Code], [r].[Name], [r].[RegionImageUrl]
+FROM (
+    SELECT [w].[Id], [w].[Description], [w].[DifficultyId], [w].[LengthInKm], [w].[Name], [w].[RegionId], [w].[WalkImageUrl]
+    FROM [Walks] AS [w]
+    ORDER BY (SELECT 1)
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+INNER JOIN [Difficulties] AS [d] ON [t].[DifficultyId] = [d].[Id]
+INNER JOIN [Regions] AS [r] ON [t].[RegionId] = [r].[Id]
+2024-09-22 23:39:06.906 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[NZWalks.API.Models.DTO.RegionDto, NZWalks.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-22 23:39:06.914 +05:30 [INF] Executed action NZWalks.API.Controllers.RegionsController.GetAll (NZWalks.API) in 37.0595ms
+2024-09-22 23:39:06.916 +05:30 [INF] Executed endpoint 'NZWalks.API.Controllers.RegionsController.GetAll (NZWalks.API)'
+2024-09-22 23:39:06.918 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7164/api/Regions - application/json null
+2024-09-22 23:39:06.919 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[NZWalks.API.Models.DTO.WalkDto, NZWalks.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-22 23:39:06.920 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7164/api/Regions - 200 null application/json; charset=utf-8 142.9391ms
+2024-09-22 23:39:06.934 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7164/api/WalksControler?pageNumber=1&pageSize=1000 - application/json null
+2024-09-22 23:39:06.924 +05:30 [INF] CORS policy execution successful.
+2024-09-22 23:39:06.931 +05:30 [INF] Executed action NZWalks.API.Controllers.WalksControler.GetAll (NZWalks.API) in 48.6181ms
+2024-09-22 23:39:06.949 +05:30 [INF] CORS policy execution successful.
+2024-09-22 23:39:06.951 +05:30 [INF] Executing endpoint 'NZWalks.API.Controllers.RegionsController.GetAll (NZWalks.API)'
+2024-09-22 23:39:06.954 +05:30 [INF] Executed endpoint 'NZWalks.API.Controllers.WalksControler.GetAll (NZWalks.API)'
+2024-09-22 23:39:06.955 +05:30 [INF] Executing endpoint 'NZWalks.API.Controllers.WalksControler.GetAll (NZWalks.API)'
+2024-09-22 23:39:06.956 +05:30 [INF] Route matched with {action = "GetAll", controller = "Regions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller NZWalks.API.Controllers.RegionsController (NZWalks.API).
+2024-09-22 23:39:06.960 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7164/api/WalksControler?pageNumber=1&pageSize=1000 - 200 null application/json; charset=utf-8 175.6203ms
+2024-09-22 23:39:06.962 +05:30 [INF] Route matched with {action = "GetAll", controller = "WalksControler"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(System.String, System.String, System.String, System.Nullable`1[System.Boolean], Int32, Int32) on controller NZWalks.API.Controllers.WalksControler (NZWalks.API).
+2024-09-22 23:39:06.965 +05:30 [INF] Get All Region Action method was invoked
+2024-09-22 23:39:06.982 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Description], [t].[DifficultyId], [t].[LengthInKm], [t].[Name], [t].[RegionId], [t].[WalkImageUrl], [d].[Id], [d].[Name], [r].[Id], [r].[Code], [r].[Name], [r].[RegionImageUrl]
+FROM (
+    SELECT [w].[Id], [w].[Description], [w].[DifficultyId], [w].[LengthInKm], [w].[Name], [w].[RegionId], [w].[WalkImageUrl]
+    FROM [Walks] AS [w]
+    ORDER BY (SELECT 1)
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+INNER JOIN [Difficulties] AS [d] ON [t].[DifficultyId] = [d].[Id]
+INNER JOIN [Regions] AS [r] ON [t].[RegionId] = [r].[Id]
+2024-09-22 23:39:06.985 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[Code], [r].[Name], [r].[RegionImageUrl]
+FROM [Regions] AS [r]
+2024-09-22 23:39:06.994 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[NZWalks.API.Models.DTO.WalkDto, NZWalks.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-22 23:39:06.996 +05:30 [INF] Finished GetAllRegions data:[{"Id":"f7248fc3-2585-4efb-8d1d-1c555f4087f6","Code":"AKL","Name":"Auckland","RegionImageUrl":"https://images.pexels.com/photos/5169056/pexels-photo-5169056.jpeg?auto=compress\u0026cs=tinysrgb\u0026w=1260\u0026h=750\u0026dpr=1"},{"Id":"14ceba71-4b51-4777-9b17-46602cf66153","Code":"BOP","Name":"Bay Of Plenty","RegionImageUrl":null},{"Id":"6884f7d7-ad1f-4101-8df3-7a6fa7387d81","Code":"NTL","Name":"Northland","RegionImageUrl":null},{"Id":"f077a22e-4248-4bf6-b564-c7cf4e250263","Code":"STL","Name":"Southland","RegionImageUrl":null},{"Id":"cfa06ed2-bf65-4b65-93ed-c9d286ddb0de","Code":"WGN","Name":"Wellington","RegionImageUrl":"https://images.pexels.com/photos/4350631/pexels-photo-4350631.jpeg?auto=compress\u0026cs=tinysrgb\u0026w=1260\u0026h=750\u0026dpr=1"}]
+2024-09-22 23:39:07.003 +05:30 [INF] Executed action NZWalks.API.Controllers.WalksControler.GetAll (NZWalks.API) in 26.52ms
+2024-09-22 23:39:07.008 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[NZWalks.API.Models.DTO.RegionDto, NZWalks.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-22 23:39:07.010 +05:30 [INF] Executed endpoint 'NZWalks.API.Controllers.WalksControler.GetAll (NZWalks.API)'
+2024-09-22 23:39:07.012 +05:30 [INF] Executed action NZWalks.API.Controllers.RegionsController.GetAll (NZWalks.API) in 47.6898ms
+2024-09-22 23:39:07.017 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7164/api/WalksControler?pageNumber=1&pageSize=1000 - 200 null application/json; charset=utf-8 83.2969ms
+2024-09-22 23:39:07.020 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7164/api/Regions - application/json null
+2024-09-22 23:39:07.023 +05:30 [INF] Executed endpoint 'NZWalks.API.Controllers.RegionsController.GetAll (NZWalks.API)'
+2024-09-22 23:39:07.034 +05:30 [INF] CORS policy execution successful.
+2024-09-22 23:39:07.037 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7164/api/Regions - 200 null application/json; charset=utf-8 119.4552ms
+2024-09-22 23:39:07.039 +05:30 [INF] Executing endpoint 'NZWalks.API.Controllers.RegionsController.GetAll (NZWalks.API)'
+2024-09-22 23:39:07.047 +05:30 [INF] Route matched with {action = "GetAll", controller = "Regions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller NZWalks.API.Controllers.RegionsController (NZWalks.API).
+2024-09-22 23:39:07.052 +05:30 [INF] Get All Region Action method was invoked
+2024-09-22 23:39:07.057 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[Code], [r].[Name], [r].[RegionImageUrl]
+FROM [Regions] AS [r]
+2024-09-22 23:39:07.066 +05:30 [INF] Finished GetAllRegions data:[{"Id":"f7248fc3-2585-4efb-8d1d-1c555f4087f6","Code":"AKL","Name":"Auckland","RegionImageUrl":"https://images.pexels.com/photos/5169056/pexels-photo-5169056.jpeg?auto=compress\u0026cs=tinysrgb\u0026w=1260\u0026h=750\u0026dpr=1"},{"Id":"14ceba71-4b51-4777-9b17-46602cf66153","Code":"BOP","Name":"Bay Of Plenty","RegionImageUrl":null},{"Id":"6884f7d7-ad1f-4101-8df3-7a6fa7387d81","Code":"NTL","Name":"Northland","RegionImageUrl":null},{"Id":"f077a22e-4248-4bf6-b564-c7cf4e250263","Code":"STL","Name":"Southland","RegionImageUrl":null},{"Id":"cfa06ed2-bf65-4b65-93ed-c9d286ddb0de","Code":"WGN","Name":"Wellington","RegionImageUrl":"https://images.pexels.com/photos/4350631/pexels-photo-4350631.jpeg?auto=compress\u0026cs=tinysrgb\u0026w=1260\u0026h=750\u0026dpr=1"}]
+2024-09-22 23:39:07.071 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[NZWalks.API.Models.DTO.RegionDto, NZWalks.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-22 23:39:07.074 +05:30 [INF] Executed action NZWalks.API.Controllers.RegionsController.GetAll (NZWalks.API) in 22.4008ms
+2024-09-22 23:39:07.078 +05:30 [INF] Executed endpoint 'NZWalks.API.Controllers.RegionsController.GetAll (NZWalks.API)'
+2024-09-22 23:39:07.079 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7164/api/Regions - application/json null
+2024-09-22 23:39:07.081 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7164/api/Regions - 200 null application/json; charset=utf-8 60.6634ms
+2024-09-22 23:39:07.088 +05:30 [INF] CORS policy execution successful.
+2024-09-22 23:39:07.096 +05:30 [INF] Executing endpoint 'NZWalks.API.Controllers.RegionsController.GetAll (NZWalks.API)'
+2024-09-22 23:39:07.099 +05:30 [INF] Route matched with {action = "GetAll", controller = "Regions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller NZWalks.API.Controllers.RegionsController (NZWalks.API).
+2024-09-22 23:39:07.104 +05:30 [INF] Get All Region Action method was invoked
+2024-09-22 23:39:07.110 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[Code], [r].[Name], [r].[RegionImageUrl]
+FROM [Regions] AS [r]
+2024-09-22 23:39:07.116 +05:30 [INF] Finished GetAllRegions data:[{"Id":"f7248fc3-2585-4efb-8d1d-1c555f4087f6","Code":"AKL","Name":"Auckland","RegionImageUrl":"https://images.pexels.com/photos/5169056/pexels-photo-5169056.jpeg?auto=compress\u0026cs=tinysrgb\u0026w=1260\u0026h=750\u0026dpr=1"},{"Id":"14ceba71-4b51-4777-9b17-46602cf66153","Code":"BOP","Name":"Bay Of Plenty","RegionImageUrl":null},{"Id":"6884f7d7-ad1f-4101-8df3-7a6fa7387d81","Code":"NTL","Name":"Northland","RegionImageUrl":null},{"Id":"f077a22e-4248-4bf6-b564-c7cf4e250263","Code":"STL","Name":"Southland","RegionImageUrl":null},{"Id":"cfa06ed2-bf65-4b65-93ed-c9d286ddb0de","Code":"WGN","Name":"Wellington","RegionImageUrl":"https://images.pexels.com/photos/4350631/pexels-photo-4350631.jpeg?auto=compress\u0026cs=tinysrgb\u0026w=1260\u0026h=750\u0026dpr=1"}]
+2024-09-22 23:39:07.123 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[NZWalks.API.Models.DTO.RegionDto, NZWalks.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-22 23:39:07.130 +05:30 [INF] Executed action NZWalks.API.Controllers.RegionsController.GetAll (NZWalks.API) in 25.663ms
+2024-09-22 23:39:07.135 +05:30 [INF] Executed endpoint 'NZWalks.API.Controllers.RegionsController.GetAll (NZWalks.API)'
+2024-09-22 23:39:07.139 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7164/api/Regions - 200 null application/json; charset=utf-8 60.3919ms
+2024-09-22 23:39:11.705 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7164/api/Regions - application/json null
+2024-09-22 23:39:11.708 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7164/api/WalksControler?pageNumber=1&pageSize=1000 - application/json null
+2024-09-22 23:39:11.713 +05:30 [INF] CORS policy execution successful.
+2024-09-22 23:39:11.718 +05:30 [INF] CORS policy execution successful.
+2024-09-22 23:39:11.719 +05:30 [INF] Executing endpoint 'NZWalks.API.Controllers.RegionsController.GetAll (NZWalks.API)'
+2024-09-22 23:39:11.720 +05:30 [INF] Executing endpoint 'NZWalks.API.Controllers.WalksControler.GetAll (NZWalks.API)'
+2024-09-22 23:39:11.722 +05:30 [INF] Route matched with {action = "GetAll", controller = "Regions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller NZWalks.API.Controllers.RegionsController (NZWalks.API).
+2024-09-22 23:39:11.723 +05:30 [INF] Route matched with {action = "GetAll", controller = "WalksControler"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(System.String, System.String, System.String, System.Nullable`1[System.Boolean], Int32, Int32) on controller NZWalks.API.Controllers.WalksControler (NZWalks.API).
+2024-09-22 23:39:11.726 +05:30 [INF] Get All Region Action method was invoked
+2024-09-22 23:39:11.735 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[Code], [r].[Name], [r].[RegionImageUrl]
+FROM [Regions] AS [r]
+2024-09-22 23:39:11.736 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Description], [t].[DifficultyId], [t].[LengthInKm], [t].[Name], [t].[RegionId], [t].[WalkImageUrl], [d].[Id], [d].[Name], [r].[Id], [r].[Code], [r].[Name], [r].[RegionImageUrl]
+FROM (
+    SELECT [w].[Id], [w].[Description], [w].[DifficultyId], [w].[LengthInKm], [w].[Name], [w].[RegionId], [w].[WalkImageUrl]
+    FROM [Walks] AS [w]
+    ORDER BY (SELECT 1)
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+INNER JOIN [Difficulties] AS [d] ON [t].[DifficultyId] = [d].[Id]
+INNER JOIN [Regions] AS [r] ON [t].[RegionId] = [r].[Id]
+2024-09-22 23:39:11.741 +05:30 [INF] Finished GetAllRegions data:[{"Id":"f7248fc3-2585-4efb-8d1d-1c555f4087f6","Code":"AKL","Name":"Auckland","RegionImageUrl":"https://images.pexels.com/photos/5169056/pexels-photo-5169056.jpeg?auto=compress\u0026cs=tinysrgb\u0026w=1260\u0026h=750\u0026dpr=1"},{"Id":"14ceba71-4b51-4777-9b17-46602cf66153","Code":"BOP","Name":"Bay Of Plenty","RegionImageUrl":null},{"Id":"6884f7d7-ad1f-4101-8df3-7a6fa7387d81","Code":"NTL","Name":"Northland","RegionImageUrl":null},{"Id":"f077a22e-4248-4bf6-b564-c7cf4e250263","Code":"STL","Name":"Southland","RegionImageUrl":null},{"Id":"cfa06ed2-bf65-4b65-93ed-c9d286ddb0de","Code":"WGN","Name":"Wellington","RegionImageUrl":"https://images.pexels.com/photos/4350631/pexels-photo-4350631.jpeg?auto=compress\u0026cs=tinysrgb\u0026w=1260\u0026h=750\u0026dpr=1"}]
+2024-09-22 23:39:11.747 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[NZWalks.API.Models.DTO.WalkDto, NZWalks.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-22 23:39:11.750 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[NZWalks.API.Models.DTO.RegionDto, NZWalks.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-22 23:39:11.753 +05:30 [INF] Executed action NZWalks.API.Controllers.WalksControler.GetAll (NZWalks.API) in 23.662ms
+2024-09-22 23:39:11.754 +05:30 [INF] Executed action NZWalks.API.Controllers.RegionsController.GetAll (NZWalks.API) in 27.9937ms
+2024-09-22 23:39:11.757 +05:30 [INF] Executed endpoint 'NZWalks.API.Controllers.WalksControler.GetAll (NZWalks.API)'
+2024-09-22 23:39:11.757 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7164/api/Regions - application/json null
+2024-09-22 23:39:11.755 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7164/api/WalksControler?pageNumber=1&pageSize=1000 - application/json null
+2024-09-22 23:39:11.759 +05:30 [INF] Executed endpoint 'NZWalks.API.Controllers.RegionsController.GetAll (NZWalks.API)'
+2024-09-22 23:39:11.761 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7164/api/WalksControler?pageNumber=1&pageSize=1000 - 200 null application/json; charset=utf-8 53.1477ms
+2024-09-22 23:39:11.765 +05:30 [INF] CORS policy execution successful.
+2024-09-22 23:39:11.770 +05:30 [INF] CORS policy execution successful.
+2024-09-22 23:39:11.772 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7164/api/Regions - 200 null application/json; charset=utf-8 67.8611ms
+2024-09-22 23:39:11.778 +05:30 [INF] Executing endpoint 'NZWalks.API.Controllers.RegionsController.GetAll (NZWalks.API)'
+2024-09-22 23:39:11.780 +05:30 [INF] Executing endpoint 'NZWalks.API.Controllers.WalksControler.GetAll (NZWalks.API)'
+2024-09-22 23:39:11.788 +05:30 [INF] Route matched with {action = "GetAll", controller = "Regions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller NZWalks.API.Controllers.RegionsController (NZWalks.API).
+2024-09-22 23:39:11.790 +05:30 [INF] Route matched with {action = "GetAll", controller = "WalksControler"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(System.String, System.String, System.String, System.Nullable`1[System.Boolean], Int32, Int32) on controller NZWalks.API.Controllers.WalksControler (NZWalks.API).
+2024-09-22 23:39:11.794 +05:30 [INF] Get All Region Action method was invoked
+2024-09-22 23:39:11.805 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Description], [t].[DifficultyId], [t].[LengthInKm], [t].[Name], [t].[RegionId], [t].[WalkImageUrl], [d].[Id], [d].[Name], [r].[Id], [r].[Code], [r].[Name], [r].[RegionImageUrl]
+FROM (
+    SELECT [w].[Id], [w].[Description], [w].[DifficultyId], [w].[LengthInKm], [w].[Name], [w].[RegionId], [w].[WalkImageUrl]
+    FROM [Walks] AS [w]
+    ORDER BY (SELECT 1)
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+INNER JOIN [Difficulties] AS [d] ON [t].[DifficultyId] = [d].[Id]
+INNER JOIN [Regions] AS [r] ON [t].[RegionId] = [r].[Id]
+2024-09-22 23:39:11.809 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[Code], [r].[Name], [r].[RegionImageUrl]
+FROM [Regions] AS [r]
+2024-09-22 23:39:11.816 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[NZWalks.API.Models.DTO.WalkDto, NZWalks.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-22 23:39:11.822 +05:30 [INF] Finished GetAllRegions data:[{"Id":"f7248fc3-2585-4efb-8d1d-1c555f4087f6","Code":"AKL","Name":"Auckland","RegionImageUrl":"https://images.pexels.com/photos/5169056/pexels-photo-5169056.jpeg?auto=compress\u0026cs=tinysrgb\u0026w=1260\u0026h=750\u0026dpr=1"},{"Id":"14ceba71-4b51-4777-9b17-46602cf66153","Code":"BOP","Name":"Bay Of Plenty","RegionImageUrl":null},{"Id":"6884f7d7-ad1f-4101-8df3-7a6fa7387d81","Code":"NTL","Name":"Northland","RegionImageUrl":null},{"Id":"f077a22e-4248-4bf6-b564-c7cf4e250263","Code":"STL","Name":"Southland","RegionImageUrl":null},{"Id":"cfa06ed2-bf65-4b65-93ed-c9d286ddb0de","Code":"WGN","Name":"Wellington","RegionImageUrl":"https://images.pexels.com/photos/4350631/pexels-photo-4350631.jpeg?auto=compress\u0026cs=tinysrgb\u0026w=1260\u0026h=750\u0026dpr=1"}]
+2024-09-22 23:39:11.827 +05:30 [INF] Executed action NZWalks.API.Controllers.WalksControler.GetAll (NZWalks.API) in 30.2905ms
+2024-09-22 23:39:11.829 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[NZWalks.API.Models.DTO.RegionDto, NZWalks.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-22 23:39:11.835 +05:30 [INF] Executed endpoint 'NZWalks.API.Controllers.WalksControler.GetAll (NZWalks.API)'
+2024-09-22 23:39:11.836 +05:30 [INF] Executed action NZWalks.API.Controllers.RegionsController.GetAll (NZWalks.API) in 43.0704ms
+2024-09-22 23:39:11.838 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7164/api/WalksControler?pageNumber=1&pageSize=1000 - 200 null application/json; charset=utf-8 82.6407ms
+2024-09-22 23:39:11.841 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7164/api/Regions - application/json null
+2024-09-22 23:39:11.842 +05:30 [INF] Executed endpoint 'NZWalks.API.Controllers.RegionsController.GetAll (NZWalks.API)'
+2024-09-22 23:39:11.855 +05:30 [INF] CORS policy execution successful.
+2024-09-22 23:39:11.858 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7164/api/Regions - 200 null application/json; charset=utf-8 100.7613ms
+2024-09-22 23:39:11.859 +05:30 [INF] Executing endpoint 'NZWalks.API.Controllers.RegionsController.GetAll (NZWalks.API)'
+2024-09-22 23:39:11.870 +05:30 [INF] Route matched with {action = "GetAll", controller = "Regions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller NZWalks.API.Controllers.RegionsController (NZWalks.API).
+2024-09-22 23:39:11.874 +05:30 [INF] Get All Region Action method was invoked
+2024-09-22 23:39:11.880 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[Code], [r].[Name], [r].[RegionImageUrl]
+FROM [Regions] AS [r]
+2024-09-22 23:39:11.888 +05:30 [INF] Finished GetAllRegions data:[{"Id":"f7248fc3-2585-4efb-8d1d-1c555f4087f6","Code":"AKL","Name":"Auckland","RegionImageUrl":"https://images.pexels.com/photos/5169056/pexels-photo-5169056.jpeg?auto=compress\u0026cs=tinysrgb\u0026w=1260\u0026h=750\u0026dpr=1"},{"Id":"14ceba71-4b51-4777-9b17-46602cf66153","Code":"BOP","Name":"Bay Of Plenty","RegionImageUrl":null},{"Id":"6884f7d7-ad1f-4101-8df3-7a6fa7387d81","Code":"NTL","Name":"Northland","RegionImageUrl":null},{"Id":"f077a22e-4248-4bf6-b564-c7cf4e250263","Code":"STL","Name":"Southland","RegionImageUrl":null},{"Id":"cfa06ed2-bf65-4b65-93ed-c9d286ddb0de","Code":"WGN","Name":"Wellington","RegionImageUrl":"https://images.pexels.com/photos/4350631/pexels-photo-4350631.jpeg?auto=compress\u0026cs=tinysrgb\u0026w=1260\u0026h=750\u0026dpr=1"}]
+2024-09-22 23:39:11.895 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[NZWalks.API.Models.DTO.RegionDto, NZWalks.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-22 23:39:11.900 +05:30 [INF] Executed action NZWalks.API.Controllers.RegionsController.GetAll (NZWalks.API) in 26.828ms
+2024-09-22 23:39:11.903 +05:30 [INF] Executed endpoint 'NZWalks.API.Controllers.RegionsController.GetAll (NZWalks.API)'
+2024-09-22 23:39:11.903 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7164/api/Regions - application/json null
+2024-09-22 23:39:11.905 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7164/api/Regions - 200 null application/json; charset=utf-8 65.0806ms
+2024-09-22 23:39:11.910 +05:30 [INF] CORS policy execution successful.
+2024-09-22 23:39:11.920 +05:30 [INF] Executing endpoint 'NZWalks.API.Controllers.RegionsController.GetAll (NZWalks.API)'
+2024-09-22 23:39:11.921 +05:30 [INF] Route matched with {action = "GetAll", controller = "Regions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller NZWalks.API.Controllers.RegionsController (NZWalks.API).
+2024-09-22 23:39:11.929 +05:30 [INF] Get All Region Action method was invoked
+2024-09-22 23:39:11.938 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[Code], [r].[Name], [r].[RegionImageUrl]
+FROM [Regions] AS [r]
+2024-09-22 23:39:11.945 +05:30 [INF] Finished GetAllRegions data:[{"Id":"f7248fc3-2585-4efb-8d1d-1c555f4087f6","Code":"AKL","Name":"Auckland","RegionImageUrl":"https://images.pexels.com/photos/5169056/pexels-photo-5169056.jpeg?auto=compress\u0026cs=tinysrgb\u0026w=1260\u0026h=750\u0026dpr=1"},{"Id":"14ceba71-4b51-4777-9b17-46602cf66153","Code":"BOP","Name":"Bay Of Plenty","RegionImageUrl":null},{"Id":"6884f7d7-ad1f-4101-8df3-7a6fa7387d81","Code":"NTL","Name":"Northland","RegionImageUrl":null},{"Id":"f077a22e-4248-4bf6-b564-c7cf4e250263","Code":"STL","Name":"Southland","RegionImageUrl":null},{"Id":"cfa06ed2-bf65-4b65-93ed-c9d286ddb0de","Code":"WGN","Name":"Wellington","RegionImageUrl":"https://images.pexels.com/photos/4350631/pexels-photo-4350631.jpeg?auto=compress\u0026cs=tinysrgb\u0026w=1260\u0026h=750\u0026dpr=1"}]
+2024-09-22 23:39:11.951 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[NZWalks.API.Models.DTO.RegionDto, NZWalks.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-22 23:39:11.955 +05:30 [INF] Executed action NZWalks.API.Controllers.RegionsController.GetAll (NZWalks.API) in 26.614ms
+2024-09-22 23:39:11.961 +05:30 [INF] Executed endpoint 'NZWalks.API.Controllers.RegionsController.GetAll (NZWalks.API)'
+2024-09-22 23:39:11.963 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7164/api/Regions - 200 null application/json; charset=utf-8 60.2476ms
+2024-09-22 23:39:15.979 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7164/api/WalksControler?pageNumber=1&pageSize=1000 - null null
+2024-09-22 23:39:15.983 +05:30 [INF] CORS policy execution successful.
+2024-09-22 23:39:15.985 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7164/api/WalksControler?pageNumber=1&pageSize=1000 - 204 null null 5.6584ms
+2024-09-22 23:39:15.988 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7164/api/WalksControler?pageNumber=1&pageSize=1000 - application/json null
+2024-09-22 23:39:15.997 +05:30 [INF] CORS policy execution successful.
+2024-09-22 23:39:15.998 +05:30 [INF] Executing endpoint 'NZWalks.API.Controllers.WalksControler.GetAll (NZWalks.API)'
+2024-09-22 23:39:16.001 +05:30 [INF] Route matched with {action = "GetAll", controller = "WalksControler"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(System.String, System.String, System.String, System.Nullable`1[System.Boolean], Int32, Int32) on controller NZWalks.API.Controllers.WalksControler (NZWalks.API).
+2024-09-22 23:39:16.009 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Description], [t].[DifficultyId], [t].[LengthInKm], [t].[Name], [t].[RegionId], [t].[WalkImageUrl], [d].[Id], [d].[Name], [r].[Id], [r].[Code], [r].[Name], [r].[RegionImageUrl]
+FROM (
+    SELECT [w].[Id], [w].[Description], [w].[DifficultyId], [w].[LengthInKm], [w].[Name], [w].[RegionId], [w].[WalkImageUrl]
+    FROM [Walks] AS [w]
+    ORDER BY (SELECT 1)
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+INNER JOIN [Difficulties] AS [d] ON [t].[DifficultyId] = [d].[Id]
+INNER JOIN [Regions] AS [r] ON [t].[RegionId] = [r].[Id]
+2024-09-22 23:39:16.022 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[NZWalks.API.Models.DTO.WalkDto, NZWalks.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-22 23:39:16.025 +05:30 [INF] Executed action NZWalks.API.Controllers.WalksControler.GetAll (NZWalks.API) in 20.2244ms
+2024-09-22 23:39:16.028 +05:30 [INF] Executed endpoint 'NZWalks.API.Controllers.WalksControler.GetAll (NZWalks.API)'
+2024-09-22 23:39:16.029 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7164/api/WalksControler?pageNumber=1&pageSize=1000 - 200 null application/json; charset=utf-8 41.5762ms
+2024-09-22 23:39:24.295 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7164/api/WalksControler/9ba0c91f-e6d3-4c3b-cf94-08dcdafcf39a - null null
+2024-09-22 23:39:24.298 +05:30 [INF] CORS policy execution successful.
+2024-09-22 23:39:24.299 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7164/api/WalksControler/9ba0c91f-e6d3-4c3b-cf94-08dcdafcf39a - 204 null null 4.6612ms
+2024-09-22 23:39:24.301 +05:30 [INF] Request starting HTTP/2 PUT https://localhost:7164/api/WalksControler/9ba0c91f-e6d3-4c3b-cf94-08dcdafcf39a - application/json 178
+2024-09-22 23:39:24.306 +05:30 [INF] CORS policy execution successful.
+2024-09-22 23:39:24.307 +05:30 [INF] Executing endpoint 'NZWalks.API.Controllers.WalksControler.Update (NZWalks.API)'
+2024-09-22 23:39:24.310 +05:30 [INF] Route matched with {action = "Update", controller = "WalksControler"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Update(System.Guid, NZWalks.API.Models.DTO.UpdateWalksRequestDto) on controller NZWalks.API.Controllers.WalksControler (NZWalks.API).
+2024-09-22 23:39:24.322 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [w].[Id], [w].[Description], [w].[DifficultyId], [w].[LengthInKm], [w].[Name], [w].[RegionId], [w].[WalkImageUrl]
+FROM [Walks] AS [w]
+WHERE [w].[Id] = @__id_0
+2024-09-22 23:39:24.334 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[@p2='?' (DbType = Guid), @p0='?' (DbType = Guid), @p1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Walks] SET [DifficultyId] = @p0, [Name] = @p1
+OUTPUT 1
+WHERE [Id] = @p2;
+2024-09-22 23:39:24.336 +05:30 [INF] Executing OkObjectResult, writing value of type 'NZWalks.API.Models.DTO.WalkDto'.
+2024-09-22 23:39:24.340 +05:30 [INF] Executed action NZWalks.API.Controllers.WalksControler.Update (NZWalks.API) in 27.5757ms
+2024-09-22 23:39:24.341 +05:30 [INF] Executed endpoint 'NZWalks.API.Controllers.WalksControler.Update (NZWalks.API)'
+2024-09-22 23:39:24.343 +05:30 [INF] Request finished HTTP/2 PUT https://localhost:7164/api/WalksControler/9ba0c91f-e6d3-4c3b-cf94-08dcdafcf39a - 200 null application/json; charset=utf-8 41.2021ms
+2024-09-22 23:39:24.414 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7164/api/WalksControler?pageNumber=1&pageSize=1000 - null null
+2024-09-22 23:39:24.430 +05:30 [INF] CORS policy execution successful.
+2024-09-22 23:39:24.431 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7164/api/WalksControler?pageNumber=1&pageSize=1000 - 204 null null 18.8691ms
+2024-09-22 23:39:24.435 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7164/api/WalksControler?pageNumber=1&pageSize=1000 - application/json null
+2024-09-22 23:39:24.446 +05:30 [INF] CORS policy execution successful.
+2024-09-22 23:39:24.449 +05:30 [INF] Executing endpoint 'NZWalks.API.Controllers.WalksControler.GetAll (NZWalks.API)'
+2024-09-22 23:39:24.453 +05:30 [INF] Route matched with {action = "GetAll", controller = "WalksControler"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(System.String, System.String, System.String, System.Nullable`1[System.Boolean], Int32, Int32) on controller NZWalks.API.Controllers.WalksControler (NZWalks.API).
+2024-09-22 23:39:24.478 +05:30 [INF] Executed DbCommand (17ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Description], [t].[DifficultyId], [t].[LengthInKm], [t].[Name], [t].[RegionId], [t].[WalkImageUrl], [d].[Id], [d].[Name], [r].[Id], [r].[Code], [r].[Name], [r].[RegionImageUrl]
+FROM (
+    SELECT [w].[Id], [w].[Description], [w].[DifficultyId], [w].[LengthInKm], [w].[Name], [w].[RegionId], [w].[WalkImageUrl]
+    FROM [Walks] AS [w]
+    ORDER BY (SELECT 1)
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+INNER JOIN [Difficulties] AS [d] ON [t].[DifficultyId] = [d].[Id]
+INNER JOIN [Regions] AS [r] ON [t].[RegionId] = [r].[Id]
+2024-09-22 23:39:24.485 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[NZWalks.API.Models.DTO.WalkDto, NZWalks.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-22 23:39:24.490 +05:30 [INF] Executed action NZWalks.API.Controllers.WalksControler.GetAll (NZWalks.API) in 30.8801ms
+2024-09-22 23:39:24.493 +05:30 [INF] Executed endpoint 'NZWalks.API.Controllers.WalksControler.GetAll (NZWalks.API)'
+2024-09-22 23:39:24.496 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7164/api/WalksControler?pageNumber=1&pageSize=1000 - 200 null application/json; charset=utf-8 61.1378ms
